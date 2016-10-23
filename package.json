@@ -1,0 +1,33 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "A simple weather app using the OpenWeatherMap API and Deniz Fuchidzhiev's icon fonts.",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "start": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NancyBabich/SimpleWeatherApp.git"
+  },
+  "keywords": [
+    "API",
+    "jQuery",
+    "OpenWeatherMap",
+    "weather"
+  ],
+  "author": "Maciek Masłowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NancyBabich/SimpleWeatherApp/issues"
+  },
+  "homepage": "https://github.com/NancyBabich/SimpleWeatherApp#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}
