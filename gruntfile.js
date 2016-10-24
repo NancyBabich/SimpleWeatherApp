@@ -43,6 +43,20 @@ module.exports = function(grunt) {
         watchTask: true,
         server: ['./css', './pages', './js', './owfont']
       }
+    },
+    
+    postcss: {
+      options: {
+        map: true,
+
+        processors: [
+          require('cssnano')()
+        ]
+      },
+      dist: {
+        src: 'css/style.css',
+        dest: 'css/style.min.css'
+      }
     }
   });
 
@@ -50,6 +64,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['uglify', 'sass', 'postcss', 'browserSync', 'watch']);
 };
