@@ -52,14 +52,12 @@ function setTemp() {
 }
     
 function showWeather(resp1, resp2) {
-  var iconCode = resp1.weather[0].icon;
-  var iconUrl = 'http://openweathermap.org/img/w/' + iconCode + '.png';
-  
+  var iconCode = resp1.weather[0].id;
   temps.c.temp = resp1.main.temp + '&deg;' + temps.c.unit.toUpperCase();  
   temps.f.temp = resp2.main.temp + '&deg;' + temps.f.unit.toUpperCase();
   $('h1').html(resp1.name);
   $('#description').html(resp1.weather[0].description);
-  $('#icon').attr('src', iconUrl);
+  $('#icon').attr('class', 'owf owf-4x owf-' + iconCode);
   setTemp();
 };
   
