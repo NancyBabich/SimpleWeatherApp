@@ -5,7 +5,10 @@ module.exports = function(grunt) {
         files: [
           'sass/style.sass'
         ],
-        tasks: ['sass'],
+        tasks: ['sass',
+                'uglify',
+                'postcss'
+        ],
         options: {
             spawn: false,
         },
@@ -34,9 +37,9 @@ module.exports = function(grunt) {
     browserSync: {
       bsFiles: {
         src: [
-          'css/style.css',
+          'css/style.min.css',
           'pages/index.html',
-          'js/script.js'
+          'js/script.min.js'
         ]
       },
       options: {
@@ -50,7 +53,7 @@ module.exports = function(grunt) {
         map: true,
 
         processors: [
-          require('cssnano')()
+          require('cssnano')({zindex: false})
         ]
       },
       dist: {

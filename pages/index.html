@@ -8,16 +8,18 @@
   </head>
   <body>
     <div class="container">
-      <div class="cf">
+      <div class="panel cf">
         <input id="city-name" type="text" placeholder="Type city name"/>
         <div class="temperature-units">
-          <span id="C" class="active">c</span><span id="separator">&#124;</span><span id="F">F</span>
-       </div>
+          <span class="temp-symbol active" data-unit="c">c</span>
+          <span id="separator">&#124;</span>
+          <span class="temp-symbol" data-unit="f">f</span>
+        </div>
       </div>
       <div class="info cf">
         <h1></h1>
-        <div class="icon-container">
-          <i id="icon"></i>
+        <div id="icon-container">
+          <img id="icon" src="">
         </div>
         <p id="temp"></p>
         <p id="description"></p>
