@@ -2,18 +2,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: [
-          'sass/style.sass',
-          'js/script.js',
-          'css/style.css'
-        ],
-        tasks: ['sass',
-                'uglify',
-                'postcss'
-        ],
+        files: ['sass/style.sass', 'js/script.js', 'css/style.css'],
+        tasks: ['sass', 'postcss'],
         options: {
-            spawn: false,
-        },
+          spawn: false
+        }
       }
     },
 
@@ -23,40 +16,26 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/style.css': 'sass/style.sass' 
-        }
-      }
-    },
-
-    uglify: {
-      my_target: {
-        files: {
-          'js/script.min.js': 'js/script.js'
+          'css/style.css': 'sass/style.sass'
         }
       }
     },
 
     browserSync: {
       bsFiles: {
-        src: [
-          'css/style.min.css',
-          'pages/index.html',
-          'js/script.min.js'
-        ]
+        src: ['css/style.min.css', 'pages/index.html', 'js/script.js']
       },
       options: {
         watchTask: true,
         server: ['./css', './pages', './js', './owfont']
       }
     },
-    
+
     postcss: {
       options: {
         map: true,
 
-        processors: [
-          require('cssnano')({zindex: false})
-        ]
+        processors: [require('cssnano')({ zindex: false })]
       },
       dist: {
         src: 'css/style.css',
@@ -68,8 +47,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'postcss', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['sass', 'postcss', 'browserSync', 'watch']);
 };
