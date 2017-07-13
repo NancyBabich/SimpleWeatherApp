@@ -9,7 +9,7 @@ The app was created to practice using Ajax APIs with jQuery.
 Run </br></br>
 `git clone https://github.com/NancyBabich/weather-app`</br></br>
 `npm install`</br></br>
-and </br</br>
+and </br></br>
 `npm run start`</br></br>
 
 The page will be displayed under localhost:3000.
