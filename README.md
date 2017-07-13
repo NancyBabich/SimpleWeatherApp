@@ -6,9 +6,11 @@ The app shows the current weather in the selected city. The user can switch betw
 The app was created to practice using Ajax APIs with jQuery.
 
 ## Using
-```git clone https://github.com/NancyBabich/SimpleWeatherApp </br>>/br>
+```
+git clone https://github.com/NancyBabich/SimpleWeatherApp </br>></br>
 npm install </br></br>
-npm run start </br></br>```
+npm run start </br></br>
+```
 
 The page will be displayed under localhost:3000.
 
