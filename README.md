@@ -7,7 +7,7 @@ The app was created to practice using Ajax APIs with jQuery.
 
 ## Using
 Run </br></br>
-`git clone https://github.com/NancyBabich/SimpleWeatherApp`</br></br>
+`https://github.com/NancyBabich/weather-app`</br></br>
 `npm install`</br></br>
 `npm run start`</br></br>
 
