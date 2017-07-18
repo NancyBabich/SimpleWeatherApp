@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: ['sass/style.sass', 'js/script.js', 'css/style.css'],
+        files: ['pages/index.html', 'sass/style.sass', 'js/script.js', 'css/style.css'],
         tasks: ['pug', 'sass', 'postcss'],
         options: {
           spawn: false
@@ -34,7 +34,6 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         map: true,
-
         processors: [require('cssnano')({ zindex: false })]
       },
       dist: {
