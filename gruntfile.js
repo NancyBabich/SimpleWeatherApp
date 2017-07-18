@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['sass/style.sass', 'js/script.js', 'css/style.css'],
-        tasks: ['sass', 'postcss'],
+        tasks: ['pug', 'sass', 'postcss'],
         options: {
           spawn: false
         }
@@ -41,6 +41,13 @@ module.exports = function(grunt) {
         src: 'css/style.css',
         dest: 'css/style.min.css'
       }
+    },
+
+    pug: {
+      dist: {
+        src: 'pug/index.pug',
+        dest: 'pages/index.html'
+      }
     }
   });
 
@@ -48,6 +55,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-pug');
 
-  grunt.registerTask('default', ['sass', 'postcss', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['pug', 'sass', 'postcss', 'browserSync', 'watch']);
 };
